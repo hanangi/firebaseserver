@@ -23,8 +23,10 @@ public class TokenController {
 
     @RequestMapping(value = "/token", method= RequestMethod.POST)
     public @ResponseBody ResponseEntity<String> tokenPost(String token, Boolean isGcm) {
-        if(isGcm) this.gcmToken = token;
-        else this.firebaseToken = token;
+        /*if(isGcm) this.gcmToken = token;
+        else this.firebaseToken = token;*/
+        this.gcmToken = token;
+        this.firebaseToken = token;
         return new ResponseEntity("ok", HttpStatus.OK);
     }
 

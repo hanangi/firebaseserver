@@ -33,13 +33,13 @@ public class Fcm {
 
         // See documentation on defining a message payload.
         Message message = Message.builder()
-                .putData("score", "850")
-                .putData("time", "2:45")
-                .putData(payload, payload)
+                //.putData("score", "850")
+                //.putData("time", "2:45")
+                .putData("payload", payload)
                 .setToken(registrationToken)
-                .setNotification(new Notification(
+                /*.setNotification(new Notification(
                         "Hanan Test",
-                        payload))
+                        payload))*/
                 .build();
 
         // Send a message to the device corresponding to the provided

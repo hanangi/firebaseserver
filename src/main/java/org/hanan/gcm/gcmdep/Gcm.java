@@ -23,5 +23,6 @@ public class Gcm {
         final Message.Builder builder = new Message.Builder().timeToLive(1000);
         builder.addData("payload", payload);
         final com.google.android.gcm.server.Result gcmResult = sender.send(builder.build(), registrationToken, 2);
+        System.out.println("GCM message result: " + gcmResult);
     }
 }
